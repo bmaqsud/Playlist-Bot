@@ -11,6 +11,12 @@ def start(update: Update, context: CallbackContext):
         update.message.reply_text("You are already registered in the database.")
 
 def handle_audio(update: Update, context: CallbackContext):
+    if not update.message.audio:
+        update.message.reply_text("Please send a valid audio file.")
+        return
+
+    context.user_data['audio_file_id'] = update.message.audio.file_id
+
     update.message.reply_text(
         "Please select a playlist to add this audio.",
         reply_markup=ReplyKeyboardMarkup(
@@ -21,27 +27,28 @@ def handle_audio(update: Update, context: CallbackContext):
             resize_keyboard=True
         )
     )
-    # Store the audio file ID in context for later use
-    context.user_data['audio_file_id'] = update.message.audio.file_id
-    
+
 
 def add_audio_to_playlist(update: Update, context: CallbackContext):
     user = update.message.from_user
-    audio_file_id = context.user_data.get('audio_file_id')
     playlist_name = update.message.text
 
-    if playlist_name not in ['Workout Playlist', 'Chill Playlist', 'Study Playlist', 'Party Playlist', 'Favorites']:
+    audio_file_id = context.user_data.get('audio_file_id')
+    if not audio_file_id:
+        update.message.reply_text("No audio file found. Please send an audio file first.")
+        return
+
+    valid_playlists = ['Workout Playlist', 'Chill Playlist', 'Study Playlist', 'Party Playlist', 'Favorites']
+    if playlist_name not in valid_playlists:
         update.message.reply_text("Invalid playlist name. Please select a valid playlist.")
         return
 
-    if audio_file_id and database.add_audio_to_playlist(user, playlist_name, audio_file_id):
+    if database.add_audio_to_playlist(user, playlist_name, audio_file_id):
         update.message.reply_text(f"Audio added to {playlist_name} successfully!")
     else:
         update.message.reply_text("Failed to add audio to the playlist. Please try again.")
-    
-    # Clear the stored audio file ID
+
     context.user_data['audio_file_id'] = None
-    update.message.reply_text("You can send another audio file to add to a playlist.")
 
 
 def list_playlists(update: Update, context: CallbackContext):

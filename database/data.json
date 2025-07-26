@@ -36,11 +36,22 @@
             "playlist": [
                 {
                     "name": "Workout Playlist",
-                    "songs": []
+                    "songs": [
+                        {
+                            "file_id": "CQACAgIAAxkBAAOYaIUJuLxC5NUjHB83ViZFXWUFlbkAAmFxAAJG79BJoJOEy4uYIkw2BA"
+                        },
+                        {
+                            "file_id": "CQACAgIAAxkBAAMDaIUM3LsbhW8dRn6rcLl4xhq7nqIAArdXAAJuCTFLZ9f5MA3fsCs2BA"
+                        }
+                    ]
                 },
                 {
                     "name": "Chill Playlist",
-                    "songs": []
+                    "songs": [
+                        {
+                            "file_id": "CQACAgIAAxkBAAMDaIUM3LsbhW8dRn6rcLl4xhq7nqIAArdXAAJuCTFLZ9f5MA3fsCs2BA"
+                        }
+                    ]
                 },
                 {
                     "name": "Study Playlist",
@@ -48,11 +59,22 @@
                 },
                 {
                     "name": "Party Playlist",
-                    "songs": []
+                    "songs": [
+                        {
+                            "file_id": "CQACAgIAAxkBAAM0aIMc4MWct1NsqW32_lOfuWhOFO0AArdXAAJuCTFLEfGZHfyyIJQ2BA"
+                        }
+                    ]
                 },
                 {
                     "name": "Favorites",
-                    "songs": []
+                    "songs": [
+                        {
+                            "file_id": "CQACAgIAAxkBAAM0aIMc4MWct1NsqW32_lOfuWhOFO0AArdXAAJuCTFLEfGZHfyyIJQ2BA"
+                        },
+                        {
+                            "file_id": "CQACAgIAAxkBAAMDaIUM3LsbhW8dRn6rcLl4xhq7nqIAArdXAAJuCTFLZ9f5MA3fsCs2BA"
+                        }
+                    ]
                 }
             ]
         },
@@ -97,6 +119,41 @@
                     "songs": [
                         {
                             "file_id": "CQACAgQAAxkBAAIBUGiBLJ4FAAFcpDZYCzk5uh0osTlnMgACcRcAAjLgcFGISrn2lkxX7zYE"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "telegram_id": 5599700812,
+            "username": "maqsud_16_02_2007",
+            "first_name": "Black star",
+            "last_name": null,
+            "playlist": [
+                {
+                    "name": "Workout Playlist",
+                    "songs": []
+                },
+                {
+                    "name": "Chill Playlist",
+                    "songs": []
+                },
+                {
+                    "name": "Study Playlist",
+                    "songs": []
+                },
+                {
+                    "name": "Party Playlist",
+                    "songs": []
+                },
+                {
+                    "name": "Favorites",
+                    "songs": [
+                        {
+                            "file_id": "CQACAgIAAxkBAAM0aIMc4MWct1NsqW32_lOfuWhOFO0AArdXAAJuCTFLEfGZHfyyIJQ2BA"
+                        },
+                        {
+                            "file_id": "CQACAgIAAxkBAAM0aIMc4MWct1NsqW32_lOfuWhOFO0AArdXAAJuCTFLEfGZHfyyIJQ2BA"
                         }
                     ]
                 }
